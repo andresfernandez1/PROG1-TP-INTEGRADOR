@@ -1,0 +1,39 @@
+ul, ol{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+/*header*/
+
+.header_main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.ul-header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+}
+
+.item-header{
+    padding: 10px;
+}
+
+#Form{
+    margin-right: 50px;
+}
