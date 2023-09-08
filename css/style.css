@@ -1,39 +1,98 @@
-ul, ol{
+body{
     padding: 0px;
     margin: 0px;
+}
+
+p{}
+
+h1{}
+
+ul, ol{
+    padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
-/*header*/
+a{
+    text-decoration: none;
+    color: white;
+}
 
-.header_main{
+/*----------------------header*/
+
+.header-main{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
+    justify-content: space-evenly;
+    background-color: rgba(0,198,201,255);
 }
 
 #logo{
     height: 100px;
     width: 100px;
-    margin-left: 50px;
+}
+
+.nav-header{
+    padding: 40px;
 }
 
 .ul-header{
     display: flex;
     flex-direction: row;
-    padding: 10px;
-}
-
-.nav-header{
-    display: flex;
-    align-items: center;
 }
 
 .item-header{
-    padding: 10px;
+    padding-inline: 20px;
+    font-size: larger;
+    font-family: 'Kanit', sans-serif;
 }
 
-#Form{
-    margin-right: 50px;
+#form{
+    padding-top: 40px;
 }
+
+.contenedor-input{}
+
+/*----------------------main*/
+
+main{
+    background-color: rgb(255, 255, 255);
+}
+.card-sec{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.card{
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ver-mas{
+    background-color: #444;
+    padding: 10px;
+    color: white;
+}
+
+.img_main{
+    width: 100%;
+}
+
+/*----------------------footer*/
+
+#idfooter{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    background-color: rgba(0,198,201,255)
+}
+
