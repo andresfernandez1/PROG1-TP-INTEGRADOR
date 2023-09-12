@@ -1,11 +1,14 @@
 body{
     padding: 0px;
     margin: 0px;
+    background-color: black;
+    font-family: 'Kanit', sans-serif;
 }
 
 p{}
 
 h1{}
+
 
 ul, ol{
     padding: 0;
@@ -43,7 +46,6 @@ a{
 .item-header{
     padding-inline: 20px;
     font-size: larger;
-    font-family: 'Kanit', sans-serif;
 }
 
 #form{
@@ -54,14 +56,15 @@ a{
 
 /*----------------------main*/
 
-main{
-    background-color: rgb(255, 255, 255);
-}
-
 #banner{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 
+}
+
+.index-h1{
+    color: white;
+    padding: 30px;
 }
 
 .card-sec{
@@ -73,21 +76,24 @@ main{
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     width: 400px;
-    margin: 30px;
+    margin: 15px;
     padding: 20px;
     text-align: center;
     background-color: #57535377;
 }
 
-.ver-mas{
-    background-color: #444;
-    padding: 10px;
+.texto-a{
     color: white;
+    padding: 20px;
 }
+
 
 .img_main{
     width: 100%;
+    height: 600px;
 }
 
 /*----------------------footer*/
@@ -98,7 +104,6 @@ main{
     font-size: large;
     padding: 0px;
     margin: 0px;
-    font-family: 'Kanit', sans-serif;
     color: white;
     background-color: rgba(0,198,201,255)
 }
@@ -106,37 +111,43 @@ main{
 /*Pelicula html*/
 
 .banner-peli{
-    background-image: url(../img/descarga.jpg);
+    background-image: url(../img/banner\ 2.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .bannercito{
     padding: 15px;
-    width: 34%;
+    width: 30%;
 }
 
 #banercitoo{
     height: 650px;
+    width: 400px;
 }
 
 .h3-detalle{
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color: rgb(0 0 0 / 58%);
     color: white;
+    width: 100%;
+    font-size: 25px;
 }
 
 .banner-peli2{
-    width: 51%;
     color: white;
+    width: 65%;
 }
 
-.h1-pelicula{
-    padding-top: 200px;
-    padding-bottom: 200px;
+#h1-pelicula{
+    margin-top: 160px;
+    margin-bottom: 160px;
     color: white;
+    background-color: rgb(0 0 0 / 58%);
+    font-size: 80px;
 }
 
 .informacion{
@@ -145,7 +156,8 @@ main{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    background-color: #44444476;
+    background-color: #444444;
+    color: white;
 }
 
 #generitos{
@@ -164,7 +176,8 @@ main{
 
 #descripcion{
     padding: 10px;
-    background-color: #44444476;
+    background-color: #444444;
+    color: white;
 }
 
 .favoritos{
@@ -172,16 +185,16 @@ main{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
-    background-color: #44444476;
+    background-color: #444444;
     padding: 15px;
 }
 
 .favoritos-botones{
-    color: black;
+    color: white;
     text-decoration: none;
     display: flex;
-    background-color: aliceblue;
-    padding: 5px;
+    background-color: #2e2a24a8;
+    padding: 14px;
 }
 
 /*serie html*/
@@ -197,5 +210,15 @@ main{
 
 .ban-simp{
     padding: 15px;
-    width: 34%;
+    width: 30%;
+}
+
+
+
+
+
+@media (max-width : 420px){
+    .header-main{
+        
+    }
 }
