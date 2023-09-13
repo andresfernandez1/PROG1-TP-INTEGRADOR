@@ -59,7 +59,6 @@ a{
 #banner{
     width: 100%;
     margin-top: 30px;
-
 }
 
 .index-h1{
@@ -215,6 +214,11 @@ a{
 }
 
 /*generos html*/
+#banner2{
+    width: 100%;
+    margin-top: 30px;
+}
+
 .cajagenero{
     background-color: black;
     padding: 10px;
@@ -232,6 +236,9 @@ a{
     width: 30%;
     margin-left: 5px;
     margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
 }
 
 #western{
@@ -242,10 +249,13 @@ a{
     border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 #cajaentera{
     background-color: white;
+    display: flex;
 }
 
 #video{
@@ -261,7 +271,100 @@ a{
 
 
 @media (max-width : 420px){
+   
+    /*index html*/
+   
+    .ul-header{
+    flex-direction: column;
+    align-items: center;
+    }
+    
     .header-main{
-        
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 20px;
+    }
+
+    .nav-header{
+        padding: 0px
+    }
+
+    /*busqueda html*/
+
+    #video{
+        margin-right: none;
+        margin-left: none;
+    }
+
+    #videito{
+        width: 300px;
+        height: 450px;
+    }
+
+    #cajaentera{
+        justify-content: flex-end;
+    }
+
+    /*generos*/
+
+    #banner{
+        display: none;
+    }
+
+    /*Series*/
+
+    .banner-serie{
+        background: none;
+        flex-direction: column;
+    }
+
+    #h1-pelicula{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .ban-simp{
+        width: 90%;
+        padding: 5%;
+    }
+
+    .banner-peli2{
+        width: 100%;
+    }
+
+    #banercitoo{
+        width: 100%;
+    }
+
+    .h3-detalle{
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Peliculas*/
+
+    .banner-peli{
+        background: none;
+        flex-direction: column;
+        margin: 0px;
+        }
+
+    .bannercito{
+        width: 90%;
+        padding: 5%;
+    }
+
+    /*generos*/
+    
+    .index-h1{
+        justify-content: center;
+        margin: 0px;
+        display: flex;
+        font-size: 25px;
+    }
+
+    #banner2{
+        display: none;
     }
 }
