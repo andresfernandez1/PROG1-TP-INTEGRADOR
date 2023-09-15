@@ -7,7 +7,9 @@ body{
 
 p{}
 
-h1{}
+h1{
+    margin: 0px;
+}
 
 
 ul, ol{
@@ -58,7 +60,7 @@ a{
 
 #banner{
     width: 100%;
-    margin-top: 30px;
+    margin-top: 12px;
 }
 
 .index-h1{
@@ -130,7 +132,7 @@ a{
 }
 
 .h3-detalle{
-    background-color: rgb(0 0 0 / 58%);
+    background-color: rgb(0 0 0 / 33%);
     color: white;
     width: 100%;
     font-size: 25px;
@@ -145,7 +147,7 @@ a{
     margin-top: 160px;
     margin-bottom: 160px;
     color: white;
-    background-color: rgb(0 0 0 / 58%);
+    background-color: rgb(0 0 0 / 33%);
     font-size: 80px;
 }
 
@@ -216,7 +218,6 @@ a{
 /*generos html*/
 #banner2{
     width: 100%;
-    margin-top: 30px;
 }
 
 .cajagenero{
@@ -255,14 +256,12 @@ a{
 
 #cajaentera{
     background-color: white;
-    display: flex;
+
 }
 
 #video{
-    margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 3%;
     height: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -293,17 +292,19 @@ a{
     /*busqueda html*/
 
     #video{
-        margin-right: none;
-        margin-left: none;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     #videito{
         width: 300px;
         height: 450px;
+        margin-left: 50px;
     }
 
     #cajaentera{
         justify-content: flex-end;
+        background-color: black;
     }
 
     /*generos*/
