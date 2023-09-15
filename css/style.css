@@ -7,7 +7,9 @@ body{
 
 p{}
 
-h1{}
+h1{
+    margin: 0px;
+}
 
 
 ul, ol{
@@ -58,8 +60,7 @@ a{
 
 #banner{
     width: 100%;
-    margin-top: 30px;
-
+    margin-top: 12px;
 }
 
 .index-h1{
@@ -131,7 +132,7 @@ a{
 }
 
 .h3-detalle{
-    background-color: rgb(0 0 0 / 58%);
+    background-color: rgb(0 0 0 / 33%);
     color: white;
     width: 100%;
     font-size: 25px;
@@ -146,7 +147,7 @@ a{
     margin-top: 160px;
     margin-bottom: 160px;
     color: white;
-    background-color: rgb(0 0 0 / 58%);
+    background-color: rgb(0 0 0 / 33%);
     font-size: 80px;
 }
 
@@ -215,6 +216,10 @@ a{
 }
 
 /*generos html*/
+#banner2{
+    width: 100%;
+}
+
 .cajagenero{
     background-color: black;
     padding: 10px;
@@ -232,6 +237,9 @@ a{
     width: 30%;
     margin-left: 5px;
     margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
 }
 
 #western{
@@ -242,17 +250,18 @@ a{
     border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 #cajaentera{
     background-color: white;
+
 }
 
 #video{
-    margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 3%;
     height: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -261,7 +270,102 @@ a{
 
 
 @media (max-width : 420px){
+   
+    /*index html*/
+   
+    .ul-header{
+    flex-direction: column;
+    align-items: center;
+    }
+    
     .header-main{
-        
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 20px;
+    }
+
+    .nav-header{
+        padding: 0px
+    }
+
+    /*busqueda html*/
+
+    #video{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    #videito{
+        width: 300px;
+        height: 450px;
+        margin-left: 50px;
+    }
+
+    #cajaentera{
+        justify-content: flex-end;
+        background-color: black;
+    }
+
+    /*generos*/
+
+    #banner{
+        display: none;
+    }
+
+    /*Series*/
+
+    .banner-serie{
+        background: none;
+        flex-direction: column;
+    }
+
+    #h1-pelicula{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .ban-simp{
+        width: 90%;
+        padding: 5%;
+    }
+
+    .banner-peli2{
+        width: 100%;
+    }
+
+    #banercitoo{
+        width: 100%;
+    }
+
+    .h3-detalle{
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Peliculas*/
+
+    .banner-peli{
+        background: none;
+        flex-direction: column;
+        margin: 0px;
+        }
+
+    .bannercito{
+        width: 90%;
+        padding: 5%;
+    }
+
+    /*generos*/
+    
+    .index-h1{
+        justify-content: center;
+        margin: 0px;
+        display: flex;
+        font-size: 25px;
+    }
+
+    #banner2{
+        display: none;
     }
 }
