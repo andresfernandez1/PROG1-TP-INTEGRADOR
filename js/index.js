@@ -7,6 +7,10 @@ let url2 = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
 let cardsec = document.querySelector("#cardsec");
 let cardter = document.querySelector("#cardter");
 
+const busqueda = document.querySelector('.index-h1')
+const form = document.querySelector('#form')
+
+
 fetch(url)
 .then(function(res) {
     return res.json();

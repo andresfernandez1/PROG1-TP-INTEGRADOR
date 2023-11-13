@@ -10,7 +10,7 @@ let banercitoo = document.querySelector("#banercitoo")
 
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey}`
 
-
+/*
 fetch(url)
 .then(function(res) {
     return res.json();
@@ -31,3 +31,4 @@ fetch(url)
 .catch(function (err) {
     console.log(err);
 })
+*/

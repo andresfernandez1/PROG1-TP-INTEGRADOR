@@ -22,7 +22,6 @@ a{
     text-decoration: none;
     color: white;
 }
-
 /*----------------------header*/
 
 .header-main{
@@ -99,14 +98,19 @@ a{
 
 /*----------------------footer*/
 
-#idfooter{
+
+.footer{
     display: flex;
-    justify-content: center;
+    background-color: white;
+    justify-content: space-around;
     font-size: large;
     padding: 0px;
     margin: 0px;
-    color: white;
-    background-color: rgba(0,198,201,255)
+}
+
+#idfooter{
+    display: flex;
+    align-items: center;
 }
 
 /*Pelicula html*/
@@ -251,6 +255,10 @@ a{
 }
 
 @media (max-width : 420px){
+
+    .footer{
+        flex-direction: column;
+    }
    
     /*index html*/
    
