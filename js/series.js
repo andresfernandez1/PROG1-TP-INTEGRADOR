@@ -17,6 +17,7 @@ let recomendaciones = document.querySelector(".recomendaciones")
 
 
 let urlSeries = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`
+let ulrRecomendaciones = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
 
 fetch(urlSeries)
 .then(function(response) {
@@ -32,6 +33,7 @@ fetch(urlSeries)
     ultEpisodio.innerText = `Ultimo Episodio: ${data.last_air_date}`
     banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`
     poster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
+    recomendaciones.innerText = "Mostrar recomendaciones:";
     let contenido = "<h3>Genero/s:</h3>";
     for (let i = 0; i < data.genres.length; i++) {
 
@@ -40,24 +42,36 @@ fetch(urlSeries)
                      </div>` 
     }
     genero.innerHTML=contenido;
-
-    let recomenda = "";
-    for (let i = 0; i < 3; i++) {
-                /* poner innerhtml */
-    }
-    /*cardReco.innerHTML=recomenda; */
-
 })
 .catch(function(error) {
     console.log(error);
 });
-
 recomendaciones.addEventListener('click', function(e) {
     if (cardReco.style.display === "none") {
         cardReco.style.display = "flex";
         recomendaciones.innerText = "Ocultar recomendaciones:"
     } else {
         cardReco.style.display = "none";
-        recomendaciones.innerText = "Mostrar recomendaciones";
+        recomendaciones.innerText = "Mostrar recomendaciones:";
     }
+});
+
+
+fetch(ulrRecomendaciones)
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    let miData = data.results
+    let recomenda = '';
+    for (let i = 0; i < 3; i++) {
+        recomenda += `<article class="card">
+                        <a href="./series.html?id=${miData[i].id}"><img class="img_main" src="https://image.tmdb.org/t/p/w500/${miData[i].backdrop_path} " alt=""></a>
+                        <a class="texto-a" href="./series.html">${miData[i].name}</a>
+                    </article>`
+    }
+    cardReco.innerHTML=recomenda
+})
+.catch(function(error) {
+    console.log(error);
 });
