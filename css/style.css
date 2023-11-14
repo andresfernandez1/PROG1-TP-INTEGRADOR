@@ -141,6 +141,13 @@ a{
     font-size: 25px;
 }
 
+.descripcion{
+    background-color: rgb(0 0 0 / 33%);
+    color: white;
+    width: 100%;
+    font-size: 25px;
+}
+
 .banner-peli2{
     color: white;
     width: 65%;
@@ -185,7 +192,6 @@ a{
 }
 
 .favoritos{
-    margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
@@ -205,7 +211,7 @@ a{
 /*serie html*/
 
 .banner-serie{
-    background-image: url(../img/Los-Simpson.webp);
+    background-image:url();
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -216,6 +222,17 @@ a{
 .ban-simp{
     padding: 15px;
     width: 30%;
+}
+
+.recomendaciones{
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.card-recomendaciones{
+    display: none;
+    background-color: black;
+    color: white;
 }
 
 /*generos html*/
