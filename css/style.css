@@ -236,8 +236,22 @@ a{
     display: none;
     background-color: black;
     color: white;
+    justify-content: space-around;
+    margin-bottom: 15px;
 }
 
+.carta-recomendaciones{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    background-color: #57535377;
+}
+.img-recomendaciones{
+    width: 100%;
+}
 /*generos html*/
 
 #banner2{

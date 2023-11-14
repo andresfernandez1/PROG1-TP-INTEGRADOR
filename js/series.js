@@ -33,7 +33,6 @@ fetch(urlSeries)
     ultEpisodio.innerText = `Ultimo Episodio: ${data.last_air_date}`
     banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`
     poster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-    recomendaciones.innerText = "Mostrar recomendaciones:";
     let contenido = "<h3>Genero/s:</h3>";
     for (let i = 0; i < data.genres.length; i++) {
 
@@ -47,15 +46,21 @@ fetch(urlSeries)
     console.log(error);
 });
 recomendaciones.addEventListener('click', function(e) {
-    if (cardReco.style.display === "none") {
+    if (recomendaciones.innerText === "Mostrar Recomendaciones:") {
         cardReco.style.display = "flex";
         recomendaciones.innerText = "Ocultar recomendaciones:"
     } else {
         cardReco.style.display = "none";
-        recomendaciones.innerText = "Mostrar recomendaciones:";
+        recomendaciones.innerText = "Mostrar Recomendaciones:";
     }
 });
 
+recomendaciones.addEventListener('mouseover', function(e) { 
+    recomendaciones.style.backgroundColor = 'gold';
+});
+recomendaciones.addEventListener('mouseout', function(e) { 
+    recomendaciones.style.backgroundColor = 'lightgrey';
+});
 
 fetch(ulrRecomendaciones)
 .then(function(response) {
@@ -65,8 +70,8 @@ fetch(ulrRecomendaciones)
     let miData = data.results
     let recomenda = '';
     for (let i = 0; i < 3; i++) {
-        recomenda += `<article class="card">
-                        <a href="./series.html?id=${miData[i].id}"><img class="img_main" src="https://image.tmdb.org/t/p/w500/${miData[i].backdrop_path} " alt=""></a>
+        recomenda += `<article class="carta-recomendaciones">
+                        <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
                         <a class="texto-a" href="./series.html">${miData[i].name}</a>
                     </article>`
     }
