@@ -53,7 +53,6 @@ a{
     padding-top: 40px;
 }
 
-.contenedor-input{}
 
 /*----------------------main*/
 
@@ -101,11 +100,16 @@ a{
 
 .footer{
     display: flex;
-    background-color: white;
+    background-color: ;
     justify-content: space-around;
     font-size: large;
-    padding: 0px;
+    padding: 20px;
     margin: 0px;
+    background-color: rgba(0,198,201,255);
+}
+
+#img-footer{
+    height: 180px;
 }
 
 #idfooter{
