@@ -4,9 +4,10 @@ let bannerpeli = document.querySelector("#bannerpeli")
 /**let id_pelicula = qs;**/
 let qsObj = new URLSearchParams(qs);
 console.log(qsObj);
-let id_pelicula = qsObj.get("id"); 
+let id_pelicula = qsObj.get('id'); 
 console.log(id_pelicula);
 let banercitoo = document.querySelector("#banercitoo")
+let h1pelicula = document.querySelector("#h1pelicula")
 
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey}`
 
@@ -16,11 +17,13 @@ fetch(url)
     return res.json();
 })
 .then(function(data) {
+    let banercitoo = document.querySelector("#banercitoo")
+
     console.log(data);
     let miData = data.results;
-    let contenido = "";
-    banercitoo.innerText = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-
+    banercitoo.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
+    let h1pelicula = document.querySelector(".h1pelicula")
+    h1pelicula.innerHTML = data.title 
 
 
 
