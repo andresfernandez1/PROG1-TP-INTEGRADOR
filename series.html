@@ -33,7 +33,7 @@
                         <label for="busqueda">🔍︎</label>
                         <input type="text" name="buscar" id="busqueda" placeholder="Buscar">
                     </div>
-
+                </form>
             </article>
     
         </section>
@@ -43,24 +43,30 @@
     <main>
         <section class="banner-serie">
             <article class="ban-simp">
-                <img id="banercitoo" src="./img/Los_Simpson_Serie_de_TV-397676780-large.jpg" alt="">
+                <img id="banercitoo" src="" alt="">
             </article>
             <article class="banner-peli2">
                 <h3 class="h3-detalle">Serie:</h3>
-                <h1 id="h1-pelicula">Los Simpson</h1>
-                <h3 class="h3-detalle">La vida de una familia normal en Springfield</h3>
+                <h1 id="h1-pelicula"></h1>
+                <h3 class="descripcion"></h3>
              </article>
         </section>
 
         <section class="informacion">
             <article>
-                <h3>Valoracion: 9.781</h3>
-                <h3>Fecha de Estreno: viernes, 9 de diciembre de 2018 </h3>
-                <h3>Ultimo Episodio: domingo, 27 de agosto de 2023</h3>
+                <h3 class="valoracion"></h3>
+                <h3 class="estreno"></h3>
+                <h3 class="ultimo-episodio"></h3>
                 <div id="generitos">
-                    <div><h3>Genero:</h3></div>
-                    <a id="fantasia" href="#">Ciencia Ficcion</a>
+                    <a id="fantasia" href="#"></a>
                 </div>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="recomendaciones">Mostrar Recomendaciones:</h2>
+
+            <article class="card-recomendaciones"> 
             </article>
         </section>
         
@@ -74,9 +80,11 @@
         </section>
 
         <!--footer-->
-        <footer>
+        <footer class="footer">
             <h1 id="idfooter">Andres Fernandez - Lisandro Zabala</h1>
+            <img id="img-footer" src="./img/movie database.webp" alt="">
         </footer>
+        <script src="./js/series.js"></script>
     </main>
 </body>
 </html>
