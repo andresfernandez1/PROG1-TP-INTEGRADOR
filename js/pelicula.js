@@ -16,10 +16,10 @@ let cardReco = document.querySelector(".card-recomendaciones")
 let recomendaciones = document.querySelector(".recomendaciones")
 
 
-let urlSeries = `https://api.themoviedb.org/3/movie/${id_peli}?api_key=${acaVaLaAPIKey}`
+let urlPeli= `https://api.themoviedb.org/3/movie/${id_peli}?api_key=${acaVaLaAPIKey}`
 let ulrRecomendaciones = `https://api.themoviedb.org/3/movie/${id_peli}/recommendations?api_key=${acaVaLaAPIKey}`
 
-fetch(urlSeries)
+fetch(urlPeli)
 .then(function(response) {
     return response.json()
 })
@@ -28,12 +28,12 @@ fetch(urlSeries)
 
     titulo.innerText = data.title
     descripcion.innerText = data.overview
-    valoracion.innerText = `Valoracion: ${data.vote_average}`
+    valoracion.innerText = `Valoracion: ${data.vote_average} / 10`
     estreno.innerText = `Fecha de estreno: ${data.release_date}`
     ultEpisodio.innerText = `Duración: ${data.runtime} minutos`
     banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`
     poster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-    let contenido = "<h3>Genero/s:</h3>";
+    let contenido = "<h3>Género/s:</h3>";
     for (let i = 0; i < data.genres.length; i++) {
 
         contenido += `<div id="generitos">
@@ -67,15 +67,21 @@ fetch(ulrRecomendaciones)
     return response.json()
 })
 .then(function(data) {
-    let miData = data.results
+    let miData = data.results;
     let recomenda = '';
-    for (let i = 0; i < 3; i++) {
+
+    if (miData.length > 0) {
+      for (let i = 0; i < 3; i++) {
         recomenda += `<article class="carta-recomendaciones">
-                        <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
-                        <a class="texto-a" href="./series.html">${miData[i].name}</a>
-                    </article>`
+                          <a href="./pelicula.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt=""></a>
+                          <a class="texto-a" href="./pelicula.html?id=${miData[i].id}">${miData[i].title}</a>
+                      </article>`;
+      }
+    } else {
+      recomenda = `<h2 class="h1-index">No hay resultados para su búsqueda</h2>`;
     }
-    cardReco.innerHTML=recomenda
+
+    cardReco.innerHTML = recomenda;
 })
 .catch(function(error) {
     console.log(error);

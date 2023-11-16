@@ -28,12 +28,12 @@ fetch(urlSeries)
 
     titulo.innerText = data.name
     descripcion.innerText = data.overview
-    valoracion.innerText = `Valoracion: ${data.vote_average}`
+    valoracion.innerText = `Valoracion: ${data.vote_average} / 10`
     estreno.innerText = `Fecha de estreno: ${data.first_air_date}`
     ultEpisodio.innerText = `Ultimo Episodio: ${data.last_air_date}`
     banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`
     poster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-    let contenido = "<h3>Genero/s:</h3>";
+    let contenido = "<h3>Género/s:</h3>";
     for (let i = 0; i < data.genres.length; i++) {
 
         contenido += `<div id="generitos">
@@ -63,31 +63,26 @@ recomendaciones.addEventListener('mouseout', function(e) {
 });
 
 fetch(ulrRecomendaciones)
-.then(function(response) {
-    return response.json()
+  .then(function(response) {
+    return response.json();
 })
 .then(function(data) {
-    let miData = data.results
+    let miData = data.results;
     let recomenda = '';
 
-    for (let i = 0; i < 3; i++) {
+    if (miData.length > 0) {
+      for (let i = 0; i < 3; i++) {
         recomenda += `<article class="carta-recomendaciones">
-                        <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
-                        <a class="texto-a" href="./series.html">${miData[i].name}</a>
-                    </article>`
+                          <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt=""></a>
+                          <a class="texto-a" href="./series.html?id=${miData[i].id}">${miData[i].name}</a>
+                      </article>`;
+      }
+    } else {
+      recomenda = `<h2 class="h1-index">No hay resultados para su búsqueda</h2>`;
     }
-    cardReco.innerHTML=recomenda
+
+    cardReco.innerHTML = recomenda;
 })
 .catch(function(error) {
     console.log(error);
 });
-
-/** if (miData>0) {for (let i = 0; i < 3; i++) {
-        recomenda += `<article class="carta-recomendaciones">
-                        <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
-                        <a class="texto-a" href="./series.html">${miData[i].name}</a>
-                    </article>`
-    }} else {
-        recomenda = `<h2 class="index-h1">No hay recomendaciones disponibles</h2>`
-    } 
-    cardReco.innerH */
