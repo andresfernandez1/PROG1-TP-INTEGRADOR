@@ -4,8 +4,8 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id_serie = qsObj.get("id"); 
 
-let urlPDiscover = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`
-let urlSDiscover = ''
+let urlGenerosP = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`
+let urlGenerosS= `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaLaAPIKey}`
 
 
 let cardsec = document.querySelector("#cardsec");
