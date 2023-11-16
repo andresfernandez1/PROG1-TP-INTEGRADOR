@@ -69,6 +69,7 @@ fetch(ulrRecomendaciones)
 .then(function(data) {
     let miData = data.results
     let recomenda = '';
+
     for (let i = 0; i < 3; i++) {
         recomenda += `<article class="carta-recomendaciones">
                         <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
@@ -80,3 +81,13 @@ fetch(ulrRecomendaciones)
 .catch(function(error) {
     console.log(error);
 });
+
+/** if (miData>0) {for (let i = 0; i < 3; i++) {
+        recomenda += `<article class="carta-recomendaciones">
+                        <a href="./series.html?id=${miData[i].id}"><img class="img-recomendaciones" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path} " alt=""></a>
+                        <a class="texto-a" href="./series.html">${miData[i].name}</a>
+                    </article>`
+    }} else {
+        recomenda = `<h2 class="index-h1">No hay recomendaciones disponibles</h2>`
+    } 
+    cardReco.innerH */
