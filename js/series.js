@@ -43,7 +43,7 @@ fetch(urlSeries)
     let contenido = "<h3>Género/s:</h3>";
     for (let i = 0; i < data.genres.length; i++) {
       contenido += `<div id="generitos">
-                      <a id="fantasia" href="#">${data.genres[i].name}</a>
+                      <a id="fantasia" href="./genero.html?id=${data.genres[i].id}">${data.genres[i].name}</a>
                     </div>` ;
     }
     genero.innerHTML = contenido;

@@ -22,7 +22,7 @@ fetch(urlPGeneros)
     // Iterar sobre la lista de géneros de películas
     for (let i = 0; i < miData.length; i++) {
       // Construir el contenido para mostrar los géneros de películas
-      contenido += `<h3 class="generoh3"><a href="./genero.html">${miData[i].name}</a></h3>`;
+      contenido += `<h3 class="generoh3"><a href="./genero.html?id=${miData[i].id}">${miData[i].name}</a></h3>`;
     }
 
     // Mostrar los géneros de películas en el elemento correspondiente del DOM
@@ -46,7 +46,7 @@ fetch(urlSGeneros)
   // Iterar sobre la lista de géneros de series
   for (let i = 0; i < miData.length; i++) {
   // Construir el contenido para mostrar los géneros de series
-     contenido += `<h3 class="generoh3"><a href="./genero.html">${miData[i].name}</a></h3>`;
+     contenido += `<h3 class="generoh3"><a href="./genero.html?id=${miData[i].id}">${miData[i].name}</a></h3>`;
   }
 
   // Mostrar los géneros de series en el elemento correspondiente del DOM
