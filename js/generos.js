@@ -35,24 +35,24 @@ fetch(urlPGeneros)
 
 // Obtener y mostrar los géneros de series
 fetch(urlSGeneros)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    let miData = data.genres;
-    let contenido = "";
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+  let miData = data.genres;
+  let contenido = "";
 
-    // Iterar sobre la lista de géneros de series
-    for (let i = 0; i < miData.length; i++) {
-      // Construir el contenido para mostrar los géneros de series
-      contenido += `<h3 class="generoh3"><a href="./genero.html">${miData[i].name}</a></h3>`;
-    }
+  // Iterar sobre la lista de géneros de series
+  for (let i = 0; i < miData.length; i++) {
+  // Construir el contenido para mostrar los géneros de series
+     contenido += `<h3 class="generoh3"><a href="./genero.html">${miData[i].name}</a></h3>`;
+  }
 
-    // Mostrar los géneros de series en el elemento correspondiente del DOM
-    cajaGeneros.innerHTML = contenido;
+  // Mostrar los géneros de series en el elemento correspondiente del DOM
+  cajaGeneros.innerHTML = contenido;
   })
-  .catch(function (error) {
+.catch(function (error) {
     // Manejar errores en la consola
     console.log(error);
-  });
+});

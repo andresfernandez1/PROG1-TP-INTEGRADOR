@@ -70,6 +70,7 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 15px;
 }
 
 .card{
@@ -209,6 +210,15 @@ a{
     border-radius: 5px;
 }
 
+.favorito-boton{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    background-color: #2e2a24a8;
+    padding: 14px;
+    border-radius: 5px;
+}
+
 /*serie html*/
 
 .banner-serie{
@@ -238,7 +248,7 @@ a{
     background-color: black;
     color: white;
     justify-content: space-around;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .carta-recomendaciones{
